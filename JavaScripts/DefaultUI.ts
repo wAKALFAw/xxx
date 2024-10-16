@@ -2,7 +2,6 @@
 export default class DefaultUI extends UIScript {
 	private character: Character;
 	private anim1 = null;
-	
 	/** 仅在游戏时间对非模板实例调用一次 */
     protected  onStart() {
 		//设置能否每帧触发onUpdate

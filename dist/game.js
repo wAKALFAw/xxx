@@ -178,10 +178,18 @@ var foreign1 = /*#__PURE__*/Object.freeze({
     default: DefaultUI$1
 });
 
+//!我上传测试一下
+
+var foreign2 = /*#__PURE__*/Object.freeze({
+    __proto__: null
+});
+
 const MWModuleMap = { 
      'E793F4E748068B7014AF149815249190': foreign1,
+     '8426152A485C880AD1EB7295E44D00AA': foreign2,
 };
-const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/DefaultUI"]]);
+const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/DefaultUI"],
+[foreign2 || {}, "JavaScripts/TestScript"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;

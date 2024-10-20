@@ -178,18 +178,113 @@ var foreign1 = /*#__PURE__*/Object.freeze({
     default: DefaultUI$1
 });
 
-//!我上传测试一下
+var Config;
+(function (Config) {
+    //!玩家需要存储的信息
+    class Data {
+    }
+    Config.Data = Data;
+})(Config || (Config = {}));
 
 var foreign2 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    get Config () { return Config; }
+});
+
+class PlayerClient extends ModuleC {
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+    }
+    /**
+     * 周期函数 每帧执行
+     * 此函数执行需要将this.useUpdate赋值为true
+     * @param dt 当前帧与上一帧的延迟 / 秒
+     */
+    onUpdate(dt) {
+    }
+    /** 脚本被销毁时最后一帧执行完调用此函数 */
+    onDestroy() {
+    }
+}
+
+var foreign3 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    PlayerClient: PlayerClient
+});
+
+class PlayerSaveData extends Subdata {
+    /**返回玩家攻击力 */
+    get akt() {
+        return 0;
+    }
+    /**返回玩家防御力 */
+    get def() {
+        return 0;
+    }
+    /**返回玩家暴击率 */
+    get crit() {
+        return 0;
+    }
+    /**返回玩家暴击伤害 */
+    get crit_damage() {
+        return 0;
+    }
+    /**返回玩家穿透 */
+    get penetrate() {
+        return 0;
+    }
+}
+__decorate([
+    Decorator.persistence()
+], PlayerSaveData.prototype, "_PlayerData", void 0);
+
+var foreign4 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    PlayerSaveData: PlayerSaveData
+});
+
+class PlayerServer extends ModuleS {
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    onStart() {
+    }
+    /**
+     * 周期函数 每帧执行
+     * 此函数执行需要将this.useUpdate赋值为true
+     * @param dt 当前帧与上一帧的延迟 / 秒
+     */
+    onUpdate(dt) {
+    }
+    /** 脚本被销毁时最后一帧执行完调用此函数 */
+    onDestroy() {
+    }
+}
+
+var foreign5 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    PlayerServer: PlayerServer
+});
+
+//!我上传测试一下
+//逆光奔跑测试上传
+
+var foreign6 = /*#__PURE__*/Object.freeze({
     __proto__: null
 });
 
 const MWModuleMap = { 
      'E793F4E748068B7014AF149815249190': foreign1,
-     '8426152A485C880AD1EB7295E44D00AA': foreign2,
+     '62B1847E4C33C8B531351499D6FDA255': foreign2,
+     'FB1956404C60BD6CABA668B734A020BD': foreign3,
+     '42AD676044AF0C14E62A58941B6C0A63': foreign4,
+     '66050E384819432B4ADD4A9408E4E944': foreign5,
+     '8426152A485C880AD1EB7295E44D00AA': foreign6,
 };
 const MWFileMapping = new WeakMap([[foreign1 || {}, "JavaScripts/DefaultUI"],
-[foreign2 || {}, "JavaScripts/TestScript"]]);
+[foreign2 || {}, "JavaScripts/Player/Config"],
+[foreign3 || {}, "JavaScripts/Player/PlayerClient"],
+[foreign4 || {}, "JavaScripts/Player/PlayerSaveData"],
+[foreign5 || {}, "JavaScripts/Player/PlayerServer"],
+[foreign6 || {}, "JavaScripts/TestScript"]]);
 
 exports.MWFileMapping = MWFileMapping;
 exports.MWModuleMap = MWModuleMap;
